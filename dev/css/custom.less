@@ -22,6 +22,11 @@ body
 	justify-content: space-around;
     align-items: center;
 
+    @media only screen and (max-width:960px)
+    {
+    	width:100%;
+    }
+
     .head__topLogo img
     {
     	width:47%;
@@ -49,6 +54,11 @@ body
 {
 	width: 960px;
 	margin:0 auto;
+
+	@media only screen and (max-width:960px)
+	{
+		width:100%
+	}
 }
 .section1
 {
@@ -61,6 +71,14 @@ body
 	div.inner
 	{
 		display:flex;
+
+		div.leftSide
+		{
+			img:first-child
+			{
+				width:100%
+			}
+		}
 		
 	}
 	div.stats
