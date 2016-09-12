@@ -1,0 +1,74 @@
+@green:#89B539;
+@beige:#fcf9f6;
+@brown:#836545;
+
+@import "sections/section2.less"; 
+
+body 
+{
+	color:@brown;
+	font-family: Arial, sans-serif;
+}
+.head
+{
+	display:flex;
+	width: 960px;
+	margin:0 auto;
+	justify-content: space-around;
+    align-items: center;
+
+    .head__topLogo img
+    {
+    	width:47%
+    }
+    .head__topTel
+    {
+    	color:@green;
+    }
+}
+
+
+.inner
+{
+	width: 960px;
+	margin:0 auto;
+}
+.section1
+{
+	background-color: @beige;
+	h1
+	{
+		text-align:center;
+	}
+	
+	div.inner
+	{
+		display:flex;
+		
+	}
+	div.stats
+	{
+		display:flex;
+		align-items:center;
+	}
+
+	div.greenForm
+	{
+		background-color: @green;
+		box-shadow: 0px 3px 13px 0px rgba(137, 181, 57, 0.36);
+
+		p 
+		{
+			color:#fff;
+		}
+
+		input
+		{
+			
+			text-align:center;
+			display: block;
+    		margin: 0.4em auto;
+		}
+	}
+
+}
