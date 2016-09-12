@@ -1,8 +1,13 @@
 @green:#89B539;
 @beige:#fcf9f6;
 @brown:#836545;
+@grey:#f2f2f2;
+@bbrown:#5B382E; //коричневый цвет кнопки
+
+@radius:20px;
 
 @import "sections/section2.less"; 
+@import "sections/section3.less"; 
 
 body 
 {
@@ -19,12 +24,24 @@ body
 
     .head__topLogo img
     {
-    	width:47%
+    	width:47%;
+    @media only screen and(max-width:480px)
+	    {
+	    	margin: 0 auto;
+    		display: block;
+	    }	
     }
     .head__topTel
     {
     	color:@green;
     }
+
+    @media only screen and (max-width:480px){
+    
+    	flex-direction:column;
+    	width:100%;
+    }	
+    
 }
 
 
@@ -72,3 +89,38 @@ body
 	}
 
 }
+
+/* leadform */
+
+div.leadform
+{
+	background-color: @grey;
+	text-align:center;
+
+	h2, .form{padding:1em}
+	form.form
+	{
+		input
+		{
+				margin:0.4em;
+			    border-radius: 20px;
+			    border: none;
+			    padding: 0.7em;
+		}
+		input[type='submit']
+		{
+			background-color: @bbrown;
+			color:#fff;
+			cursor:pointer;
+
+			&:hover
+			{
+				background-color: #fff;
+				color:@green;
+				border:1px solid @green;
+			}
+
+		}
+	}
+}
+

@@ -12,7 +12,9 @@ module.exports = function (grunt)
 		      }
 		    },
 		    files: {
-		      'index.html': ['dev/index.pug']
+		      'index.html': ['dev/index.pug'],
+		      'dev/sections/section3.html': ['dev/sections/section3.pug']
+
 		    }
 		  }
 		},
@@ -44,7 +46,7 @@ module.exports = function (grunt)
 		},
 		scripts:
 		{
-			files:['dev/index.pug'],
+			files:['dev/index.pug', 'dev/sections/section3.pug'],
 			tasks:['pug'],
 			options: {
 		      livereload: true,

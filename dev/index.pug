@@ -4,7 +4,10 @@ html(lang="ru")
     title pageTitle
     link(rel='stylesheet', href='dev/css/custom.css')
     script(type='text/javascript', src='dev/js/custom.js')  
+    script(type='text/javascript', src='dev/js/lazysizes.min.js')  
+    script(type='text/javascript', src='dev/js/ls.include.min.js')  
     meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
   body
     div.head
       div.head__topLogo
@@ -18,7 +21,7 @@ html(lang="ru")
         input(type='button', value='Заказать звонок') 
     
 
-        //- section1
+    //- section1
     div.section1
       h1 СТРОИТЕЛЬСТВО ДОМОВ ИЗ БРЕВНА <br> ОТ ПРОИЗВОДИТЕЛЯ "ПОД КЛЮЧ"
       
@@ -44,7 +47,8 @@ html(lang="ru")
             p.
               Мы не передаем Вашу персональную информацию третьим лицам
 
-        //- section2
+    //- section2
+
     div.section2
       h2 Правильно произведенный стеновой комплект - <br><span>главная гарантия долговечности и теплоты дома</span>
       div.inner
@@ -70,5 +74,17 @@ html(lang="ru")
             Посмотрите видео отзыв
           div.youtube-player(data-id='9wkr4njFbCM')
 
-            
+    //- leadform
+
+    div.leadform
+      div.inner
+        h2 Заказать стеновой комплект с ценой от производителя
+        form.form
+          input(type='text' placeholder='Ваше имя' name='name' required)        
+          input(type='text' placeholder='Ваш телефон' name='phone' reqiured)
+
+          input(type='submit' value='Заказать')
+
+    //- section3
+    div.section3.lazyload(data-include='dev/sections/section3.html')
 
