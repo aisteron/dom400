@@ -1,0 +1,103 @@
+.section4
+{
+	color:#fff;
+	height:765px;
+	@media only screen and (max-width:630px)
+	{
+		height:100%;
+	}
+	h2
+	{
+		text-align: center;
+		margin-top: 0;
+    	padding-top: 1em;
+	}
+
+	div.row
+	{
+		display:flex;
+		text-align:center;
+		margin-top:6em;
+		justify-content: space-between;
+		@media only screen and (max-width:630px)
+		{
+			flex-wrap:wrap;
+			text-align: left;
+
+			.noicon
+			{
+				margin:1em;
+			}
+
+			.upGreen > span
+			{
+				display:inline;
+			}
+
+			.iconblock
+			{
+				width:100%;
+				text-align:center;
+			}
+		}
+		hr
+		{
+			width:50%;
+			@media only screen and (max-width:630px)
+			{
+				display:none;
+			}
+		}
+
+		.up
+		{
+			font-size: 1.5em;
+			
+		}
+		.noicon
+		{
+			align-self: center;
+			flex-basis:200px;
+		}
+		.iconblock
+		{
+			flex-basis:200px;
+		}
+		.upGreen
+		{
+			color:@green;
+
+			> span
+			{
+				    border: 1px solid @green;
+				    height: 50px;
+				    display: block;
+				    width: 50px;
+				    margin: 0 auto;
+				    border-radius: 50%;
+				    padding: 0.7em;
+				    text-align: center;
+			}
+		}
+	}
+	input[type='button']
+	{
+		margin:1em auto;
+		display:inherit;
+		background-color: @green;
+		border-radius:20px;
+		border:0;
+		padding:1em;
+		color:#fff;
+
+		margin-top:4em;
+		cursor:pointer;
+		&:hover
+		{
+			background-color: #fff;
+			color:@green;
+			border:1px solid @green;
+		}
+
+	}
+}

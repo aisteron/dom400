@@ -4,4 +4,216 @@ div.section3
 	{
 		h2,p{text-align: center;}
 	}
+
+	div.circle
+	{
+		border-radius: 50%;
+		width: 36px;
+	    height: 36px;
+	    padding: 8px;
+	    text-align: center;	    
+	    font: 32px Arial, sans-serif;
+	    cursor:pointer;
+
+	    &:hover
+	    {
+		color: @green;
+	    background: #fff;
+	    border: 1px solid @green;
+	    } 
+	    + span 
+	    {
+	    	padding:1em;
+	    }
+	}
+	div.drow
+	{
+		background: @green;
+		color:#fff;
+	}
+	div.active
+	{
+		border: 1px solid @green;
+	    color: @green;
+	    background: #fff;
+	}
+	div.numbers
+	{
+		display: flex;
+    	align-items: center;
+    	flex-wrap: wrap;
+    	justify-content: center;
+
+	}
+	div.numbers:nth-of-type(2)
+	{
+		border-bottom: 1px solid #ccc;
+    	padding-bottom: 1em;
+	}
+	div.tabarea
+	{
+		display:none
+	}
+	div.tabarea.active
+	{
+		display:block
+	}
+	#t1
+	{
+		img{width:100%}
+		.grey
+		{
+			background-color: #ccc;
+			text-align: center;
+			color:#fff;
+			padding:1em;
+		}
+		.green
+		{
+			background-color: @green;
+			padding:1em;
+			color:#fff;
+		}
+	}
+	#t2
+	{
+		background: url(../../img/bgst2.jpg);
+		height: 883px;
+    	background-position: -217px;
+    	color:#fff;
+
+    	.c3 
+    	{
+    		    display: flex;
+    			height: 245px;
+    	}
+    	div.circle:nth-of-type(2)
+    	{
+    		align-self:flex-end;
+
+    		+ span 
+    		{
+    			align-self:flex-end;
+    		}
+    	}
+
+	}
+	#t3
+	{
+		.innert3
+		{
+				display: flex;
+			    margin-top: 1em;
+			    padding-top: 1em;
+
+				@media only screen and(max-width:640px)
+				{
+					flex-wrap:wrap;
+				}	
+			
+		}
+		.bubble
+		{
+			    border: 1px solid #ccc;
+			    padding: 1em;
+			    margin: 0.3em;
+		}
+	}
+
+	#t4
+	{
+		h2
+		{
+			span
+			{
+				color:@green;
+			}
+		}
+		div.row
+		{
+			display: flex;
+			@media only screen and (max-width:680px)
+			{
+				flex-wrap:wrap;
+
+				div.img img 
+				{
+					width:100%;
+				}
+			}
+		}
+	}
+
+	#t5
+	{
+		h2
+		{
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		ol{
+		  counter-reset: myCounter;
+		}
+
+		li{
+		  list-style: none;
+		}
+
+		li:before {
+		  counter-increment: myCounter;
+		  content:counter(myCounter);
+		  color: white;
+		  background: @green;
+		  display: inline-block;
+		  text-align: center;
+		  margin: 5px 10px;
+		  line-height: 40px;
+		  width: 40px;
+		  height: 40px;
+		}
+
+		div.wrap
+		{
+			display:flex;
+			@media only screen and (max-width:980px)
+			{
+				flex-wrap:wrap;
+			}
+		}
+	}
+
+	#t6
+	{
+		h2
+		{
+			text-transform: uppercase;
+			color:@green;
+		}
+	}
+
+	#t7
+	{
+		h2
+		{
+			text-transform: uppercase;
+			text-align: center;
+		}
+		p.description
+		{
+			text-align: center;
+			font-size: 1.1em;
+		}
+		div.row
+		{
+			display:flex;
+		}
+		div.row:nth-of-type(2n)
+		{
+			flex-direction:row-reverse;
+		} 
+	}
+
+	
+
 }
