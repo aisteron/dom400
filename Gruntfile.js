@@ -39,7 +39,7 @@ module.exports = function (grunt)
 	{
 		css:
 		{
-			files:['dev/css/custom.less', 'dev/css/sections/section2.less', 'dev/css/sections/section3.less', 'dev/css/sections/section4.less'],
+			files:['dev/css/custom.less', 'dev/css/sections/section2.less', 'dev/css/sections/section3.less', 'dev/css/sections/section4.less', 'dev/css/sections/section5.less'],
 			tasks:['less'],
 			options: {
 		      livereload: true,
