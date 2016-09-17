@@ -76,7 +76,8 @@
 
 document.addEventListener('lazyincluded',  function(e){
     // e.target has new content
-  if(document.querySelector(".section5").classList.contains('lazyload')==false)
+  if(document.querySelector(".section5").classList.contains('lazyload')==false && 
+    document.querySelectorAll('[src="dev/js/swiper.min.js"]').length<1)
   {
     var tag = document.createElement("script");
     tag.src = "dev/js/swiper.min.js";
@@ -89,16 +90,20 @@ document.addEventListener('lazyincluded',  function(e){
     
     jq.onload = function()
     {
-        var lit = document.createElement("script");
-        lit.src = "dev/lity/lity.js";
-        document.getElementsByTagName("head")[0].appendChild(lit); 
-        console.log('lity loaded after jq');
+        
 
+        if($("script[src='dev/lity/lity.js']").length <1)
+        {
+                var lit = document.createElement("script");
+                lit.src = "dev/lity/lity.js";
+                document.getElementsByTagName("head")[0].appendChild(lit); 
+                console.log('lity loaded after jq');
+        }
 
 
         $('.house').click(function(){
             console.log('house click');
-            lity('<div id="txtHint"><b>Person info will be listed here...</b></div>');
+            lity('<div id="txtHint"><b>Информация загружается...</b></div>');
 
 
 
