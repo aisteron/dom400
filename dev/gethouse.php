@@ -10,20 +10,40 @@ while ($row = $results->fetchArray()) {
 	echo '<h1>'.$row['name'].'</h1>';
 
 	echo '<div class="wrapper">';
+	if($id<=11)
+	{
 	echo '<div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/projects/0'.$id.'/001.jpg"></div>
-            <div class="swiper-slide"><img src="img/projects/0'.$id.'/002.jpg"></div>
-            <div class="swiper-slide"><img src="img/projects/0'.$id.'/003.jpg"></div>
-            <div class="swiper-slide"><img src="img/projects/0'.$id.'/004.jpg"></div>
-            <div class="swiper-slide"><img src="img/projects/0'.$id.'/005.jpg"></div>
-            <div class="swiper-slide"><img src="img/projects/0'.$id.'/006.jpg"></div>
-            <div class="swiper-slide"><img src="img/projects/0'.$id.'/007.jpg"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/001.jpg" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/002.jpg" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/003.jpg" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/004.jpg" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/005.jpg" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/006.jpg" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/007.jpg" class="lazyload"></div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>';	
+} else
+{
+	echo '<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/001.png" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/002.png" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/003.png" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/004.png" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/005.png" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/006.png" class="lazyload"></div>
+            <div class="swiper-slide"><img data-src="img/projects/0'.$id.'/007.png" class="lazyload"></div>
 
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
     </div>';
+}
+	
 
 
     echo '<div class="stats">
