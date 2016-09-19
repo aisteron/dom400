@@ -2,10 +2,7 @@ doctype html
 html(lang="ru")
   head
     title pageTitle
-    link(rel='stylesheet', href='dev/css/custom.css')
-    script(type='text/javascript', src='dev/js/custom.js')  
-    script(type='text/javascript', src='dev/js/lazysizes.min.js')  
-    script(type='text/javascript', src='dev/js/ls.include.min.js')  
+    link(rel='stylesheet', href='dev/css/custom.css') 
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')  
   body
@@ -186,7 +183,11 @@ html(lang="ru")
         form.form
           input(type='text' placeholder='Ваше имя' required name='name')
           input(type='text' placeholder='Ваш телефон' required name='phone')
-          input(type='submit' value='Отправить') 
+          input(type='submit' value='Отправить')
+    
+    script(type='text/javascript', src='dev/js/custom.js')  
+    script(type='text/javascript', src='dev/js/lazysizes.min.js')  
+    script(type='text/javascript', src='dev/js/ls.include.min.js')             
 
     script.
       var jq ={};
