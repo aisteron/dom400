@@ -78,5 +78,9 @@ div.inner
 				по факту их
 				выполнения						
 
-
-	input(type='button' value='Скачать пример договора')
+	a(href='#example' data-lity) Скачать пример договора
+	div#example.lity-hide
+		h3 Оставьте свою почту и мы вышлем вам пример договора
+		form.form
+			input(type='text' name='phone' placeholder='Ваша почта' required)
+			input(type='submit' value='Отправить')

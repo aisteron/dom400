@@ -230,6 +230,23 @@ html(lang="ru")
                 });
           })
 
+        $(document).on("submit",".form",function(e) {
+
+        e.preventDefault();
+              //устанавливаем событие отправки для формы с id=form
+                var form_data = $(this).serialize(); //собираем все данные из формы
+                $.ajax({
+                      type: "POST", //Метод отправки
+                      url: "send.php", //путь до php файла-отправителя
+                      data: form_data,
+                      success: function(data) {
+                           //код в этом блоке выполняется при успешной отправке сообщения
+                           alert(data);
+                           //$('.status').html(data);
+                      }
+                });
+
+        });
 
        }
       }

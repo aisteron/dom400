@@ -101,4 +101,37 @@
 		}
 
 	}
+	div.inner a[href='#example']
+	{
+	color: #fff;
+    text-decoration: none;
+    background-color: @green;
+    padding: 1em;
+    border-radius: 18px;
+    display: block;
+    width: 200px;
+    margin: 1em auto;
+    cursor:pointer;
+    border:1px solid transparent;
+
+    &:hover
+    {
+		background-color: #fff;
+		border:1px solid @green;
+		color:@green;
+    }
+	}
+}
+
+div#example
+{
+	.form
+	{
+		input
+		{
+			margin:0.5em auto;
+			padding:1em;
+		}
+		
+	}
 }
