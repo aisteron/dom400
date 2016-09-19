@@ -3,7 +3,7 @@ div.inner
 	div.leftside
 		p.bgreen.
 			+7 (843) 202 34 49
-		input(type='button' class='bbrown' value='Закажите звонок')
+		a(href='#bot' data-lity) Заказать звонок 
 		p.copy.
 			Wood House Group<br>
 			© 2016 Строительство домов из бревна от производителя
@@ -13,12 +13,20 @@ div.inner
 		p.
 			Наш офис находится по адресу:
 			г.Казань, ул.Журналистов 56c
-		input(type='button' class='mbrown' value='Посмотреть на карте >>')
+		
+		a(href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.2279998377676!2d49.194143816222194!3d55.82400178057241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415eb2eb6854948f%3A0xd572aa0cfba0035a!2z0YPQuy4g0JbRg9GA0L3QsNC70LjRgdGC0L7QsiwgNTYsINCa0LDQt9Cw0L3RjCwg0KDQtdGB0L8uINCi0LDRgtCw0YDRgdGC0LDQvSwgNDIwMDg4!5e0!3m2!1sru!2sru!4v1474265720526" data-lity) Посмотреть на карте 	
 		p.
 			Наше производство находится по адресу:
 			Кир.область
-		input(type='button' class='mbrown' value='Посмотреть на карте >>')
+		a(href='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d66296.2966641254!2d50.11570978271556!3d58.717268813868245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43fc85dcda5ea1cf%3A0xf131d571747f1920!2z0KHQu9C-0LHQvtC00YHQutC-0LksINCa0LjRgNC-0LLRgdC60LDRjyDQvtCx0Lsu!5e0!3m2!1sru!2sru!4v1474266291801' data-lity) Посмотреть на карте
 		p.smtel.
 			<b>+7 (843) 202 34 49</b>
 			Реквизиты 
 			Проекты
+		div#bot.lity-hide
+			div.bot-lity
+				h3 Оставьте свой номер телефона
+				form.form
+					input(type='text' placeholder='Ваше имя' required)
+					input(type='text' placeholder='Ваш телефон' required)
+					input(type='submit' value='Отправить')

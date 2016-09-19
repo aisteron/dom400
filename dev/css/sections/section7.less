@@ -1,6 +1,6 @@
 div.section7
 {
-	height: 247px;
+	height: 325px;
     background: url(../../img/footer_bg.jpg) center no-repeat;
     background-position: -169px -269px;
     border:1px solid #eee;
@@ -19,5 +19,46 @@ div.section7
 	{
 		color:@green;
 		font-size: 2em;
+	}
+
+	div.rightside, div.leftside
+	{
+		a[data-lity]
+		{
+			    background-color: @brown;
+			    color: #fff;
+			    text-decoration: none;
+			    padding: 1em;
+			    border-radius: 24px;
+			    border:1px solid transparent;
+			    cursor:pointer;
+
+			        margin: 1em;
+				    display: block;
+				    width: 160px;
+				    text-align: center;
+
+			    &:hover
+			    {
+			    	background-color: #fff;
+			    	border:1px solid @brown;
+			    	color:@brown;
+			    }
+		}
+	}
+}
+
+div#bot, div#topform
+{
+	form.form
+	{
+		input
+		{
+			display: block;
+			margin:1em auto;
+			padding:1em;
+			border:none;
+			border-radius:15px;
+		}
 	}
 }

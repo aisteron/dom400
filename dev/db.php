@@ -32,4 +32,3 @@ while ($row = $results->fetchArray()) {
 
 
 <link rel="stylesheet" href="dev/css/swiper.min.css">
-<link href="dev/lity/lity.css" rel="stylesheet">

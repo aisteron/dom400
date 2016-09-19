@@ -83,32 +83,12 @@ document.addEventListener('lazyincluded',  function(e){
     tag.src = "dev/js/swiper.min.js";
     document.getElementsByTagName("head")[0].appendChild(tag);
 
+      
+          $('.house').click(function(){
+            lity('<div id="txtHint"><b>Информация загружается...</b></div>')
+            console.log('house clicked');
+          })
 
-    var jq = document.createElement("script");
-    jq.src = "dev/lity/jquery-3.1.0.slim.min.js";
-    document.getElementsByTagName("head")[0].appendChild(jq);
-    
-    jq.onload = function()
-    {
-        
-
-        if($("script[src='dev/lity/lity.js']").length <1)
-        {
-                var lit = document.createElement("script");
-                lit.src = "dev/lity/lity.js";
-                document.getElementsByTagName("head")[0].appendChild(lit); 
-                console.log('lity loaded after jq');
-        }
-
-
-        $('.house').click(function(){
-            console.log('house click');
-            lity('<div id="txtHint"><b>Информация загружается...</b></div>');
-
-
-
-        })
-    }
 
   } 
     

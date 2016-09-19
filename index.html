@@ -1,3 +1,101 @@
 <!DOCTYPE html><html lang="ru"><head><title>pageTitle</title><link rel="stylesheet" href="dev/css/custom.css"><script type="text/javascript" src="dev/js/custom.js"> </script><script type="text/javascript" src="dev/js/lazysizes.min.js"> </script><script type="text/javascript" src="dev/js/ls.include.min.js"> </script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><div class="head"><div class="head__topLogo"><img src="img/logo.png"></div><div class="head__topAddr">Производство и строительство домов из бревна<br>  
-Офис: г. Казань, ул. Журналистов 56</div><div class="head__topTel">+7 (843) 202 34 49</div><div class="head__topButton"><input type="button" value="Заказать звонок"></div></div><div class="section1"><h1>СТРОИТЕЛЬСТВО ДОМОВ ИЗ БРЕВНА <br> ОТ ПРОИЗВОДИТЕЛЯ "ПОД КЛЮЧ"</h1><div class="inner"><div class="leftSide"><img src="img/section1__auctionHouseImg.jpg"><div class="stats"><div>БЕСПЛАТНО подбор и устройство фундамента</div><div><img src="img/section1__Arrow.png"></div><div>Акция действует:      </div></div></div><div class="rightSide"><p>По Татарстану нами реализовано уже более 3000 м<sup>2</sup>    </p><div class="greenForm"><p>Оставьте заявку сейчас и получите эскизный проект Бесплатно!  </p><form class="form"><input type="text" placeholder="Ваше имя"><input type="submit" value="Оставить заявку"></form><p>Мы не передаем Вашу персональную информацию третьим лицам
-</p></div></div></div></div><div class="section2"><h2>Правильно произведенный стеновой комплект - <br><span>главная гарантия долговечности и теплоты дома</span></h2><div class="inner"><div class="leftSide"><p>Топ 6 преимуществ нашего производства:</p><ul><li title="Используем северный лес зимней заготовки"><span class='li1'></span>  Увеличиваем теплосбережение дома</li><li title="Все станки в производственной линии одной марки Sherwood"><span class='li2'></span>  Новое оборудование 2015г.в.</li><li title="Станок токарно-роторного типа ОФЗОц"><span class='li3'></span>  Никаких кривых бревен</li><li title="Делаем компенсационный пропил"><span class='li4'></span>  Уменьшаем трещины</li><li title="Снимаем 1-2см защитного слоя девесины"><span class='li5'></span>  Увеличиваем долговечность</li><li><span class='li6'></span>  Обрабатываем антисептиком Pnosept 46        </li></ul></div><div class="rightSide"><p>Посмотрите видео отзыв</p><div class="youtube-player" data-id="9wkr4njFbCM"></div></div></div></div><div class="leadform"><div class="inner"><h2>Заказать стеновой комплект с ценой от производителя</h2><form class="form"><input type="text" placeholder="Ваше имя" name="name" required><input type="text" placeholder="Ваш телефон" name="phone" reqiured><input type="submit" value="Заказать"></form></div></div><div class="section3 lazyload" data-include="dev/sections/section3.html"></div><div class="leadform"><div class="inner"><h2>Заказать строительство дома из бревна под "ключ"</h2><form class="form"><input type="text" placeholder="Ваше имя" name="name" required><input type="text" placeholder="Ваш телефон" name="phone" reqiured><input type="submit" value="Заказать"></form></div></div><div class="section4 lazyload" data-include="dev/sections/section4.html"></div><div class="section5 lazyload" data-include="dev/db.php"></div><div class="leadform"><div class="inner"><h2>Получить полный каталог проектов БЕСПЛАТНО</h2><form class="form"><input type="text" placeholder="Ваше имя" name="name" required><input type="text" placeholder="Ваш телефон" name="phone" reqiured><input type="submit" value="Заказать"></form></div></div><div class="section6 lazyload" data-include="dev/sections/section6.html"></div><div class="section7 lazyload" data-include="dev/sections/section7.html"> </div></body></html>
+Офис: г. Казань, ул. Журналистов 56</div><div class="head__topTel">+7 (843) 202 34 49</div><div class="head__topButton"><a href="#topform" data-lity>Заказать звонок</a></div></div><div class="section1"><h1>СТРОИТЕЛЬСТВО ДОМОВ ИЗ БРЕВНА <br> ОТ ПРОИЗВОДИТЕЛЯ "ПОД КЛЮЧ"</h1><div class="inner"><div class="leftSide"><img src="img/section1__auctionHouseImg.jpg"><div class="stats"><div><b>БЕСПЛАТНО</b> подбор и<br> устройство фундамента</div><div><img src="img/section1__Arrow.png"></div><div><p>Акция действует:</p><div id="clockdiv"><div class="count"><span class="days"></span><span class="smalltext">Дней</span></div><div class="count"><span class="hours"></span><span class="smalltext">Часов</span></div><div class="count"><span class="minutes"></span><span class="smalltext">Минут                  </span></div><div class="count"><span class="seconds"></span><span class="smalltext">Секунд</span></div></div></div></div></div><script>        function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
+</script><div class="rightSide"><p>По Татарстану нами реализовано уже более 3000 м<sup>2</sup>    </p><div class="greenForm"><p>Оставьте заявку сейчас и получите эскизный проект Бесплатно!  </p><form class="form"><input type="text" placeholder="Ваше телефон" name="phone"><input type="submit" value="Оставить заявку"></form><p>Мы не передаем Вашу персональную информацию третьим лицам
+</p></div></div></div></div><div class="section2"><h2>Правильно произведенный стеновой комплект - <br><span>главная гарантия долговечности и теплоты дома</span></h2><div class="inner"><div class="leftSide"><p>Топ 6 преимуществ нашего производства:</p><ul><li title="Используем северный лес зимней заготовки"><span class='li1'></span>  Увеличиваем теплосбережение дома</li><li title="Все станки в производственной линии одной марки Sherwood"><span class='li2'></span>  Новое оборудование 2015г.в.</li><li title="Станок токарно-роторного типа ОФЗОц"><span class='li3'></span>  Никаких кривых бревен</li><li title="Делаем компенсационный пропил"><span class='li4'></span>  Уменьшаем трещины</li><li title="Снимаем 1-2см защитного слоя девесины"><span class='li5'></span>  Увеличиваем долговечность</li><li><span class='li6'></span>  Обрабатываем антисептиком Pnosept 46        </li></ul></div><div class="rightSide"><p>Посмотрите видео отзыв</p><div class="youtube-player" data-id="9wkr4njFbCM"></div></div></div></div><div class="leadform"><div class="inner"><h2>Заказать стеновой комплект с ценой от производителя</h2><form class="form"><input type="text" placeholder="Ваше имя" name="name" required><input type="text" placeholder="Ваш телефон" name="phone" reqiured><input type="submit" value="Заказать"></form></div></div><div class="section3 lazyload" data-include="dev/sections/section3.html"></div><div class="leadform"><div class="inner"><h2>Заказать строительство дома из бревна под "ключ"</h2><form class="form"><input type="text" placeholder="Ваше имя" name="name" required><input type="text" placeholder="Ваш телефон" name="phone" reqiured><input type="submit" value="Заказать"></form></div></div><div class="section4 lazyload" data-include="dev/sections/section4.html"></div><div class="section5 lazyload" data-include="dev/db.php"></div><div class="leadform"><div class="inner"><h2>Получить полный каталог проектов БЕСПЛАТНО</h2><form class="form"><input type="text" placeholder="Ваше имя" name="name" required><input type="text" placeholder="Ваш телефон" name="phone" reqiured><input type="submit" value="Заказать"></form></div></div><div class="section6 lazyload" data-include="dev/sections/section6.html"></div><div class="section7 lazyload" data-include="dev/sections/section7.html"></div><div class="lity-hide" id="topform"><div class="bot-lity"><h3>Оставьте свой номер телефона</h3><form class="form"><input type="text" placeholder="Ваше имя" required name="name"><input type="text" placeholder="Ваш телефон" required name="phone"><input type="submit" value="Отправить"></form></div></div><script>var jq ={};
+function loadjq ()
+{
+  jq = document.createElement("script");
+  jq.src = "https://code.jquery.com/jquery-2.2.4.min.js";
+  document.getElementsByTagName("head")[0].appendChild(jq);
+
+  jq.onload = function()
+  {
+  
+
+  if($("script[src='dev/lity/lity.js']").length <1)
+  {
+          var lit = document.createElement("script");
+          lit.src = "dev/lity/lity.js";
+          document.getElementsByTagName("head")[0].appendChild(lit); 
+          console.log('lity loaded after jq');
+
+          loadStyleSheet('dev/lity/lity.css');
+  }
+
+  $(".form").submit(function(e)
+    { 
+    e.preventDefault();
+        //устанавливаем событие отправки для формы с id=form
+          var form_data = $(this).serialize(); //собираем все данные из формы
+          $.ajax({
+                type: "POST", //Метод отправки
+                url: "send.php", //путь до php файла-отправителя
+                data: form_data,
+                success: function(data) {
+                     //код в этом блоке выполняется при успешной отправке сообщения
+                     alert(data);
+                     //$('.status').html(data);
+                }
+          });
+    })
+
+
+ }
+}
+ 
+setTimeout(loadjq, 2000);
+
+
+// to defer the loading of stylesheets
+  // just add it right before the </body> tag
+  // and before any javaScript file inclusion (for performance)  
+  function loadStyleSheet(src){
+      if (document.createStyleSheet) document.createStyleSheet(src);
+      else {
+          var stylesheet = document.createElement('link');
+          stylesheet.href = src;
+          stylesheet.rel = 'stylesheet';
+          stylesheet.type = 'text/css';
+          document.getElementsByTagName('head')[0].appendChild(stylesheet);
+      }
+  }</script></body></html>
