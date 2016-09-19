@@ -1,8 +1,7 @@
 doctype html
 html(lang="ru")
   head
-    title pageTitle
-    link(rel='stylesheet', href='dev/css/custom.css') 
+    title pageTitle 
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     style.
@@ -211,6 +210,7 @@ html(lang="ru")
                 console.log('lity loaded after jq');
 
                 loadStyleSheet('dev/lity/lity.css');
+                loadStyleSheet('dev/css/custom.css');
         }
 
         $(".form").submit(function(e)
