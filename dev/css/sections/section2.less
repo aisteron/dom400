@@ -18,7 +18,8 @@
 				margin:0 auto;
 			}
 		}
-		
+
+			
 	h2
 	{
 		text-align: center;
@@ -31,6 +32,7 @@
 
 	div.leftSide
 	{
+		
 		p {
 			text-align: center;
 			font-weight: bold;
@@ -72,13 +74,28 @@
 		}
 
 	}
-	div.rightSide p 
+	div.rightSide  
 	{
-			text-align: center;
-			font-weight: bold;
+		@media only screen and (max-width:437px)
+        {
+        	width:100%;
+
+        }
+			p
+			{
+				text-align: center;
+				font-weight: bold;
+			}
+			
 	}
 }
-
+	@media only screen and (max-width:437px)
+	{
+		.leftSide
+			{
+				width: 100%;
+			}
+    }
 
 /*стили для плеера*/
 
@@ -91,7 +108,11 @@
         max-width: 100%;
         background: #000;
         margin: 5px;
-        width:400px
+        width:400px;
+        @media only screen and (max-width:437px)
+        {
+        	width:100%;
+        }
     }
     
     .youtube-player iframe {

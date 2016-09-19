@@ -86,6 +86,10 @@ div.section3
     	{
     		    display: flex;
     			height: 245px;
+    			@media only screen and (max-width:413px)
+    			{
+    				flex-wrap:wrap;
+    			}
     	}
     	div.circle:nth-of-type(2)
     	{
@@ -189,6 +193,13 @@ div.section3
 		{
 			text-transform: uppercase;
 			color:@green;
+		}
+		img
+		{
+			@media only screen and (max-width:740px)
+			{
+				width:100%;
+			}
 		}
 	}
 
