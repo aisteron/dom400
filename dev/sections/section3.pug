@@ -5,6 +5,20 @@ div.inner
 	h2 Осуществляем полный цикл работ, от разработки проекта- до отделки дома “под ключ”
 	p.
 		9 этапов строительства дома из бревна:
+
+	<select id='stage9'>
+		<option value="t1" >1. Эскиз</option>
+		<option value="t2">2. Проект</option>
+		<option value="t3">3. Фундамент</option>
+		<option value="t4">4. Перекрытия</option>
+		<option value="t5">5. Стеновой комплект</option>
+		<option value="t6">6. Фронтоны</option>
+		<option value="t7">7. Крыша</option>
+	</select>
+	script.
+		$('#stage9').change(function(){
+		openTab(event, $(this).val());
+		})	
 	div.numbers
 		div.circle.drow(onclick="openTab(event, 't1')").
 			1

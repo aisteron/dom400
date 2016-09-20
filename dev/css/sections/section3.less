@@ -43,7 +43,26 @@ div.section3
     	align-items: center;
     	flex-wrap: wrap;
     	justify-content: center;
+    	@media only screen and (max-width:540px)
+    	{
+    		display:none;
+    	}
 
+	}
+	#stage9
+	{
+		display:none;
+	}
+	@media only screen and (max-width:540px)
+	{
+		#stage9
+		{
+			display:block;
+			padding: 1em;
+		    display: block;
+		    width: 100%;
+		    font-size: 1em;
+		}
 	}
 	div.numbers:nth-of-type(2)
 	{
@@ -113,7 +132,14 @@ div.section3
 				@media only screen and(max-width:640px)
 				{
 					flex-wrap:wrap;
-				}	
+				}
+				@media only screen and(max-width:500px)
+				{
+					div.img img
+					{
+						width:100%;
+					}
+				}
 			
 		}
 		.bubble
